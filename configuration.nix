@@ -10,13 +10,16 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./prokoseb.nix
+      ./jetbrains.nix
     ];
 
   #
 
 
 
+  #system time
 
+  time.hardwareClockInLocalTime = true;
 
   programs.fish.enable = true;
 
@@ -28,11 +31,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.i
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   #Set your time zone.
   time.timeZone = "Europe/Prague";
+
+  #snad se to nerozije
+  services.xserver.videoDrivers = [ "nvidia" ] ;
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -54,13 +60,20 @@
   # };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  #services.xserver.enable = true;
 
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  
+#  services.xserver = {
+#    enable = true;
+#    desktopManager = {
+#      xterm.enable = false;
+#      xfce.enable = true;
+#    };
+#    displayManager.defaultSession = "xfce";
+#  };
 
   # Configure keymap in X11
   services.xserver.layout = "us";
