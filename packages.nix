@@ -96,6 +96,10 @@
     python39Packages.pip
     python39Packages.setuptools
 
+    #editor
+    vim
+
+
 ];
 
 } 

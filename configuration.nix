@@ -88,22 +88,7 @@
      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
    };
 
-  # List packages installed in system profile. To search, run:
-  #$ nix search wget
-   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     firefox
-     git
-     (pkgs.discord.overrideAttrs (old: rec{
-        version = "0.0.17";
-        src = fetchurl {
-          url = "https://dl.discordapp.net/apps/linux/${version}/discord-${version}.tar.gz";
-          sha256 = "058k0cmbm4y572jqw83bayb2zzl2fw2aaz0zj1gvg6sxblp76qil";
-        };
-      }))
-   ];
-   nixpkgs.config.allowUnfree = true;	
+  nixpkgs.config.allowUnfree = true;	
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
