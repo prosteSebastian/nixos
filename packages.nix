@@ -96,11 +96,6 @@
     python39Packages.pip
     python39Packages.setuptools
 
-    #apps
-    vscode
-    spotify
-
-	
 ];
 
 } 

@@ -9,8 +9,7 @@
     webstorm
     clion
     rider
-    #gateway
-
+    datagrip
     jdk
   ];
 }
