@@ -76,7 +76,8 @@
     linuxKernel.packages.linux_5_10.perf
     bintools-unwrapped # gcc-unwrapped
     gnome.gnome-tweaks
-  
+    neofetch
+
     # Java
     jdk
     jdk8
@@ -90,7 +91,8 @@
     php74Packages.composer
     php80Packages.composer
 
-
+    #mysql
+    adminer
 
     nodejs
     nodePackages.npm

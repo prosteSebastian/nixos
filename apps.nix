@@ -28,6 +28,12 @@
 
       #learning
       anki
+       
+      #mo like
+      libreoffice
+
+      #vm
+      virtualbox
 ];
   
 } 

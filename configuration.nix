@@ -12,6 +12,7 @@
       ./jetbrains.nix
       ./packages.nix
       ./prokoseb.nix
+      ./servers.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
