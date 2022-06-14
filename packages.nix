@@ -86,9 +86,9 @@
     #PHP
     php
     php80Packages.box
-    php74
-    php74Packages.box
-    php74Packages.composer
+   # php74
+   # php74Packages.box
+   # php74Packages.composer
     php80Packages.composer
 
     #mysql
@@ -117,6 +117,8 @@
     python39Packages.distro
     #editor
     vim
+    #shell
+    zsh
 
 ];
 
