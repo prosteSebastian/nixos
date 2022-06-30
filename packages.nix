@@ -63,6 +63,7 @@
     #xf86_input_wacom
 
     # Utilities
+    valgrind
     wget
     curl
     git
@@ -77,7 +78,14 @@
     bintools-unwrapped # gcc-unwrapped
     gnome.gnome-tweaks
     neofetch
+  
+    fzf
 
+    #pinentry
+    pinentry-curses
+    pinentry
+    pinentry-gnome
+    
     # Java
     jdk
     jdk8

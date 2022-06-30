@@ -71,7 +71,16 @@
   # Enable sound.
    sound.enable = true;
    hardware.pulseaudio.enable = true;
-  
+
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryFlavor = "curses";
+  };
+  services.pcscd.enable = true; 
+
+  services.dbus.packages = [ pkgs.gcr ];
+
   #bluetooth
   hardware.bluetooth.enable = true;
 
