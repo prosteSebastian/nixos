@@ -76,6 +76,7 @@
     linuxKernel.packages.linux_5_10.perf
     bintools-unwrapped # gcc-unwrapped
     gnome.gnome-tweaks
+    gnome.gnome-shell-extensions
     neofetch
     bat
     fzf
@@ -126,6 +127,8 @@
     vim
     #shell
     zsh
+
+    konsole
 
 ];
 
