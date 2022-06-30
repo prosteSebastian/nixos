@@ -12,8 +12,10 @@
       ./jetbrains.nix
       ./packages.nix
       ./prokoseb.nix
+      ./fonts.nix
       ./servers.nix
     ];
+
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -29,11 +31,19 @@
   #services.xserver.wacom = true;
  
   #fish
-  programs.fish.enable = true;
+  #programs.fish.enable = true;
 
+  #zsh
+  programs.zsh.enable = true;
+  environment.systemPackages = with pkgs; [
+    zsh
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-completions
+  ];
   users.users.prokoseb = {   
-    shell = pkgs.fish;
-  };
+   shell = pkgs.zsh;
+   };
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -75,19 +85,19 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-    pinentryFlavor = "curses";
+
   };
-  services.pcscd.enable = true; 
 
-  services.dbus.packages = [ pkgs.gcr ];
+  programs.seahorse.enable = true;
 
+  services.gnome.gnome-keyring.enable = true;
   #bluetooth
   hardware.bluetooth.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
    services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Do't forget to set a password with ‘passwd’.
    users.users.prokoseb = {
      isNormalUser = true;
      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.

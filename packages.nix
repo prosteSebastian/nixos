@@ -69,7 +69,6 @@
     git
     git-open
     cmake
-    gnupg
     lsof
     whois
     dnsutils
@@ -78,7 +77,7 @@
     bintools-unwrapped # gcc-unwrapped
     gnome.gnome-tweaks
     neofetch
-  
+    bat
     fzf
 
     #pinentry
