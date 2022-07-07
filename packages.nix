@@ -64,6 +64,7 @@
 
     # Utilities
     valgrind
+    docker
     wget
     curl
     git
@@ -77,6 +78,7 @@
     bintools-unwrapped # gcc-unwrapped
     gnome.gnome-tweaks
     gnome.gnome-shell-extensions
+    gnomeExtensions.unite
     neofetch
     bat
     fzf
