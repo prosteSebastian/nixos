@@ -6,6 +6,11 @@
     # Wire guard VPN
     #wireguard
 
+    #fcking gnome
+   # wdisplays
+   
+    gnome-randr
+
     # TUIS
     vim_configurable
     neovim
@@ -76,10 +81,7 @@
     file
     linuxKernel.packages.linux_5_10.perf
     bintools-unwrapped # gcc-unwrapped
-    gnome.gnome-tweaks
-    gnome.gnome-shell-extensions
-    gnomeExtensions.unite
-    neofetch
+   neofetch
     bat
     fzf
 

@@ -34,6 +34,9 @@
 
       #vm
       virtualbox
+
+      #video
+      kodi
 ];
   
 } 

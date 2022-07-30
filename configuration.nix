@@ -14,6 +14,9 @@
       ./prokoseb.nix
       ./fonts.nix
       ./servers.nix
+      ./gnome.nix
+     #./kde.nix
+     #./i3.nix
     ];
 
 
@@ -66,11 +69,6 @@
   services.xserver.enable = true;
 
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  
-
   # Configure keymap in X11
   # services.xserver.layout = "us";
   # services.xserver.xkbOptions = "eurosign:e";
@@ -82,15 +80,14 @@
    sound.enable = true;
    hardware.pulseaudio.enable = true;
 
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
+   programs.gnupg.agent = {
+     enable = true;
+     enableSSHSupport = true;
+   };
 
-  };
+  # programs.seahorse.enable = true;
 
-  programs.seahorse.enable = true;
-
-  services.gnome.gnome-keyring.enable = true;
+  # services.gnome.gnome-keyring.enable = true;
   #bluetooth
   hardware.bluetooth.enable = true;
 
