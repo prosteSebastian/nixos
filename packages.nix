@@ -111,22 +111,22 @@
     yarn
 
     # Python
-    python27Full
+    # python27Full
 
-    python37Full
-    python37Packages.virtualenv
-    python37Packages.pip
-    python37Packages.setuptools
+   # python37Full
+   # python37Packages.virtualenv
+    #python37Packages.pip
+    #python37Packages.setuptools
 
     
-    python38Full
-    python38Packages.distro
+    #python38Full
+    #python38Packages.distro
     
     python39Full
-    python39Packages.virtualenv
-    python39Packages.pip
-    python39Packages.setuptools
-    python39Packages.distro
+    #python39Packages.virtualenv
+    #python39Packages.pip
+    #python39Packages.setuptools
+    #python39Packages.distro
     #editor
     vim
     #shell
