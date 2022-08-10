@@ -38,6 +38,7 @@
     traceroute
     gcc
     killall
+    gdb
     #thefuck
     nix-diff
     nix-index
