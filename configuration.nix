@@ -38,7 +38,7 @@
   #Set your time zone.
   time.timeZone = "Europe/Prague";
 
-  #snad se to nerozije
+  #snad se to nerozbije
   services.xserver.videoDrivers = [ "nvidia" ] ;
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.

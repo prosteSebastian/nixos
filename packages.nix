@@ -14,6 +14,7 @@
     sl # :D
     #shell
     fish
+    zsh
     #browsers
     google-chrome
     # Commands
@@ -98,8 +99,13 @@
 
     #editor
     vim
+    
+    #terminal
+    konsole
 
-
+    gnome.gnome-tweaks
+    gnome.gnome-shell-extensions
+    gnomeExtensions.unite
 ];
 
 } 

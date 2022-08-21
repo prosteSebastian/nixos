@@ -3,13 +3,13 @@
 {
 
   environment.systemPackages = with pkgs.jetbrains; [
-    idea-ultimate
+    #idea-ultimate
     phpstorm
     pycharm-professional
     webstorm
     clion
-    rider
+    #rider
     datagrip
-    jdk
+    #jdk
   ];
 }
