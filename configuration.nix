@@ -8,27 +8,38 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./apps.nix
+      ./jetbrains.nix
       ./packages.nix
       ./prokoseb.nix
-      ./jetbrains.nix
-      ./apps.nix
+      ./fonts.nix
+      ./de/gnome.nix 
+    
     ];
 
-  #
 
+ 
+  
 
+  #tablet
+  #services.xserver.wacom = true;
+ 
+  #fish
+  #programs.fish.enable = true;
 
-  #system time
-
-  time.hardwareClockInLocalTime = true;
-
-  programs.fish.enable = true;
-
+  #zsh
+  programs.zsh.enable = true;
+  environment.systemPackages = with pkgs; [
+    zsh
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-completions
+  ];
   users.users.prokoseb = {   
-    shell = pkgs.fish;
-  };
+   shell = pkgs.zsh;
+   };
 
-  # Use the systemd-boot EFI boot loader.
+ # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -46,7 +57,7 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   #networking.interfaces.eno2.useDHCP = true;
-  #networking.interfaces.wlo1.useDHCP = true;
+  #networking.interfaces.wlo1.useDHCP = true;  
   networking.networkmanager.enable= true;
 
   # Configure network proxy if necessary
@@ -64,20 +75,27 @@
   services.xserver.enable = true;
 
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
   # Configure keymap in X11
-  services.xserver.layout = "us";
-  services.xserver.xkbOptions = "eurosign:e";
+  # services.xserver.layout = "us";
+  # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
   # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+   sound.enable = true;
+   hardware.pulseaudio.enable = true;
+
+   programs.gnupg.agent = {
+     enable = true;
+     enableSSHSupport = true;
+   };
+
+  # programs.seahorse.enable = true;
+
+  # services.gnome.gnome-keyring.enable = true;
+  #bluetooth
+  hardware.bluetooth.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -87,8 +105,8 @@
      isNormalUser = true;
      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
    };
-
-  nixpkgs.config.allowUnfree = true;	
+   
+  nixpkgs.config.allowUnfree = true;	 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
