@@ -39,7 +39,8 @@
     gcc
     killall
     gdb
-    #thefuck
+    cgdb
+    thefuck
     nix-diff
     nix-index
     pciutils
