@@ -5,12 +5,17 @@
     #hydra-unstable
     # Wire guard VPN
     #wireguard
-
-    #fcking gnome
+#    touchegg
+ #   pantheon.touchegg
+  #fcking gnome
    # wdisplays
-   
+  flameshot
+   nodejs
+     gpp 
+    cmake   
     gnome-randr
-
+    winetricks
+    wine
     # TUIS
     vim_configurable
     neovim

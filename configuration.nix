@@ -14,8 +14,9 @@
       ./prokoseb.nix
       ./fonts.nix
       ./servers.nix
-      ./de/gnome.nix 
-    
+      ./de/plasma.nix 
+      ./vscode.nix
+#      ./services.nix    
     ];
 
 

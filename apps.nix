@@ -5,8 +5,6 @@
           spotify
           mpv
 
-          #ide
-          vscode
 
           #web browsers
           firefox
@@ -25,10 +23,15 @@
       
       #artistpico
       xournalpp
-
+      
+      perf-tools
+      cling
+      ghidra
       #learning
       anki
-       
+
+      #aps
+      rars      
       #mo like
       libreoffice
 
@@ -37,6 +40,10 @@
 
       #video
       kodi
+
+      #aps
+      verilog
+      gtkwave
 ];
   
 } 
