@@ -16,9 +16,9 @@
       ./servers.nix
       ./de/plasma.nix 
       ./vscode.nix
-#      ./services.nix    
+      ./services.nix
+#      ./touchegg.nix
     ];
-
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -118,7 +118,7 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
+  i18n.defaultLocale = "en_US.UTF-8";
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

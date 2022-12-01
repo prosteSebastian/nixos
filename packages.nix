@@ -9,7 +9,8 @@
  #   pantheon.touchegg
   #fcking gnome
    # wdisplays
-  flameshot
+   locale
+   flameshot
    nodejs
      gpp 
     cmake   

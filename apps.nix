@@ -24,6 +24,7 @@
       #artistpico
       xournalpp
       
+      ghidra      
       perf-tools
       cling
       ghidra
