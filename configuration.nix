@@ -17,6 +17,7 @@
       ./de/plasma.nix 
       ./vscode.nix
       ./services.nix
+#      ./mathematica.nix
 #      ./touchegg.nix
     ];
 

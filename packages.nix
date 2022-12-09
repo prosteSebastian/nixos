@@ -63,7 +63,7 @@
 
     # Utilities
     coreutils
-
+poppler_utils
     # man page
     man
     man-pages
