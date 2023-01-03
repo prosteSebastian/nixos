@@ -23,7 +23,7 @@
       
       #artistpico
       xournalpp
-      mathematica      
+#      mathematica      
       ghidra      
       perf-tools
       cling
