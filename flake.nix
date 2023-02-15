@@ -24,12 +24,13 @@
           config.allowUnfree = true;
         };
       };
-      overlay-dev-null = final: prev: {
-        dev-null = import nixpkgs-dev-null {
-          inherit system;
-          config.allowUnfree = true;
-        };
-      };
+      
+      #overlay-dev-null = final: prev: {
+        #dev-null = import nixpkgs-dev-null {
+          #inherit system;
+          #config.allowUnfree = true;
+        #};
+      #};
     in with nixpkgs.lib; {
       nixosConfigurations.nixos = inputs.nixpkgs.lib.nixosSystem {
         inherit system;
@@ -39,9 +40,9 @@
         modules = [
           ({ config, pkgs, ... }: {
             nixpkgs.overlays =
-              [ overlay-stable overlay-master overlay-dev-null ];
+              [ overlay-stable overlay-master ];
             nix.extraOptions = "experimental-features = nix-command flakes";
-            nix.package = pkgs.dev-null.nix;
+            #nix.package = pkgs.dev-null.nix;
             nix.registry.nixpkgs.flake = inputs.nixpkgs;
           })
 
